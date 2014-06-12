@@ -4,7 +4,7 @@
 # Start with ubuntu precise (LTS).
 FROM ubuntu:12.04
 
-MAINTAINER Maciej Gąsiorowski "maciej.gasiorowski@grupawp.pl"
+MAINTAINER Maciej Gąsiorowski "maciej.gasiorowski@gmail.com"
 
 # Never ask for confirmations
 ENV DEBIAN_FRONTEND noninteractive
