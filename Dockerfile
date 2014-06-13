@@ -77,6 +77,7 @@ RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter tool
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'build-tools-19.0.1' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'build-tools-19.0.2' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'build-tools-19.0.3' --no-ui --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'build-tools-19.1.0' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'android-19' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'addon-google_apis-google-19' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter extra --no-ui --force -a
