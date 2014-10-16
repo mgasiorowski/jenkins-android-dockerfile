@@ -1,5 +1,6 @@
 # Android development environment for ubuntu precise (12.04 LTS).
-# version 0.0.1
+# version 1.0
+
 
 # First build the container and give a name to the resulting image:
 # docker build -t jenkins/android .
@@ -18,10 +19,11 @@
 # Check port:
 # docker port android_project_name 22
 
+
 # Start with ubuntu precise (LTS).
 FROM ubuntu:12.04
 
-MAINTAINER Maciej Gąsiorowski "maciej.gasiorowski@gmail.com"
+MAINTAINER Maciej Gąsiorowski "maciej.gasiorowski@grupawp.pl"
 
 # Never ask for confirmations
 ENV DEBIAN_FRONTEND noninteractive
@@ -95,7 +97,9 @@ RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'bui
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'build-tools-19.0.2' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'build-tools-19.0.3' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'build-tools-19.1.0' --no-ui --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'build-tools-20' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'android-19' --no-ui --force -a
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'android-20' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter 'addon-google_apis-google-19' --no-ui --force -a
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter extra --no-ui --force -a
 
